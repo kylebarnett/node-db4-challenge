@@ -1,0 +1,22 @@
+Database Schema:
+
+Recipes, Ingredients, Instructions
+
+Tables:
+
+recipes
+  - id
+  - recipe_name
+
+ingredients
+  - id
+  - ingredient_name
+  - recipe_id
+
+instructions
+  - id
+  - instruction_info
+
+recipe_instructions
+  - recipe_id
+  - ingredient_id
