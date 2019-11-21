@@ -7,16 +7,15 @@ Tables:
 recipes
   - id
   - recipe_name
+  - instructions
 
 ingredients
   - id
   - ingredient_name
-  - recipe_id
+  - quantity
 
-instructions
-  - id
-  - instruction_info
 
-recipe_instructions
+recipe_ingredients
   - recipe_id
-  - ingredient_id
+  - ingredients_id
+
