@@ -1,17 +1,17 @@
 
 exports.up = function (knex) {
   return knex.schema.createTable('recipes', tbl => {
-    tbl.increments();
+    tbl.increments('id');
     tbl.string('recipe_name', 128).notNullable();
     tbl.string('instructions').notNullable()
   })
     .createTable('ingredients', tbl => {
-      tbl.increments();
+      tbl.increments('id');
       tbl.string('ingredient_name', 128).notNullable().unique();
       tbl.string('quantity', 128).notNullable().unique();
     })
     .createTable('recipe_ingredients', tbl => {
-      tbl.increments();
+      tbl.increments('id');
       tbl.integer('recipe_id')
         .unsigned()
         .notNullable()

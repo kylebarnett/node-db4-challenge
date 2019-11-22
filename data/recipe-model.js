@@ -16,7 +16,7 @@ function getShoppingList(id) {
     .join('recipe_ingredients', 'r.id', 'recipe_ingredients.recipe_id')
     .select('r.id', 'recipe_name', 'i.ingredient_name', 'instructions', 'i.quantity')
     .where({ recipe_id: id })
-    .limit(1)
+    .first()
 }
 
 function getInstructions(id) {
